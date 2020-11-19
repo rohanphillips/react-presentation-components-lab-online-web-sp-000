@@ -4,10 +4,14 @@ import ReactDOM from 'react-dom';
 import SimpleComponent from './components/SimpleComponent';
 import SimplerComponent from './components/SimplerComponent';
 
+clickResponse = (event) =>{
+  event.target.value = "I was clicked"
+}
+
 ReactDOM.render(
   <div>
     <SimpleComponent />
-    <SimplerComponent handleClick={undefined} />
+    <SimplerComponent handleClick={this.clickResponse}/>
   </div>,
   document.getElementById('root')
 );
